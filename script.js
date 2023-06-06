@@ -1,13 +1,15 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function() {
     const shiftForm = document.getElementById("shiftForm");
     shiftForm.addEventListener("submit", handleFormSubmit);
+  
     const storedStartDate = localStorage.getItem("startDate");
     if (storedStartDate) {
-        document.getElementById("startDate").value = storedStartDate;
+      document.getElementById("startDate").value = storedStartDate;
     }
-
+  
     handleFormSubmit(); // Populate the calendar on page load
-});
+  });
+  
 
 function handleFormSubmit(event) {
     event.preventDefault();
